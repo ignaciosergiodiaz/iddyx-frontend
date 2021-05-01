@@ -1,0 +1,37 @@
+.title{
+  font-family: 'Cinzel', serif;
+  font-size:2.5em;
+  color: #294E5D;
+}
+
+.card{
+  display: inline;
+  margin: 2% 2% 2% !important;
+}
+
+.example-card {
+  max-width: 300px;
+  height: auto;
+  padding-top:3%;
+}
+
+.example-card .example-header-image{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+mat-card{
+  display: inline-block;
+  margin:3% 3% 3%;
+}
+
+.example-card:hover{
+  shadow: 2px 2px ;
+}
+

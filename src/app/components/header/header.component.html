@@ -1,0 +1,84 @@
+<mat-toolbar color="primary" class="mat-elevation-z10 background-nav" >
+  <div class="container">
+    <div fxHide.gt-xs>
+      <button mat-icon-button (click)="onToggleSideNav()">
+          <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <div>
+      <a mat-button [routerLink]="['']" class="title-nav text-center">
+       Registralo //
+      </a>
+    </div>
+  </div>
+
+</mat-toolbar>
+
+<mat-toolbar color="primary" class="mat-elevation-z10 background-nav" >
+
+  <div class="container">
+
+    <ng-container *ngIf="!us.loggedIn() ; else loggedIn">
+
+      <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+
+        <a mat-button [routerLink]="['']">
+          Inicio
+        </a>
+
+        <button mat-button [routerLink]="['registrar_producto']">
+          Registrar Producto
+        </button>
+
+        <button mat-button [routerLink]="['reportar_producto']">
+          Reportar Producto
+        </button>
+
+        <span class="example-spacer"></span>
+
+        <button mat-raised-button [routerLink]="['login']" color="primary" style="margin-right:1%;">
+          Iniciar Sessión
+        </button>
+
+        <button mat-raised-button [routerLink]="['registrarse']" color="accent">
+          Registrate
+        </button>
+
+      </div>
+
+    </ng-container>
+
+  </div>
+
+  <ng-template #loggedIn>
+
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+
+      <a mat-button [routerLink]="['']">
+        Inicio
+      </a>
+
+      <button mat-button [routerLink]="['registrar_producto']">
+        Registrar Producto
+      </button>
+
+      <button mat-button [routerLink]="['reportar_producto']">
+        Reportar Producto
+      </button>
+
+      <span class="example-spacer"></span>
+
+      <button mat-button [routerLink]="['profile']" style="margin-right:1%;">
+          Profile
+      </button>
+
+      <button mat-raised-button (click)="us.logout()" color="warn">
+          Cerrar Sesión
+      </button>
+
+    </div>
+
+  </ng-template>
+
+</mat-toolbar>
