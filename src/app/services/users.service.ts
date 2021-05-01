@@ -22,7 +22,8 @@ export class UsersService {
   }
 
   loggedIn(){
-    return !!localStorage.getItem("token")
+    return localStorage.getItem("token")
+    
   }
 
   getToken(){
