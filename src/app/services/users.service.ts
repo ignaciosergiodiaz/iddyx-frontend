@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 
 export class UsersService {
 
-  URL = 'http://localhost:3000/api' ;
+  URL = 'https://api.iddux.com/api' ;
 
   constructor(private http: HttpClient, private router: Router ) { }
 
@@ -23,7 +23,7 @@ export class UsersService {
 
   loggedIn(){
     return localStorage.getItem("token")
-    
+
   }
 
   getToken(){

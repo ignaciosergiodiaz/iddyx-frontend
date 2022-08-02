@@ -12,7 +12,7 @@ export class ProductsService {
   Product = {}
   product: Product;
 
-  URI = 'http://localhost:3000/api' ;
+  URI = 'https://api.iddux.com/api' ;
 
   constructor(private http: HttpClient) { }
 

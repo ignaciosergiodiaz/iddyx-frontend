@@ -1,3 +1,7 @@
+:root{
+  --primary-color: #1976D2;
+}
+
 .example-spacer {
   flex: 1 1 auto;
 }
@@ -26,7 +30,7 @@ input.example-right-align {
 }
 
 .background-nav{
-  background: #556F7A ;
+  background: var(--primary-color) ;
   color: #fff !important ;
 }
 

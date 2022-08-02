@@ -26,12 +26,12 @@ input.example-right-align {
 }
 
 .background-nav{
-  background: #556F7A ;
+  background: var(--primary-color) ;
   color: #fff !important ;
 }
 
 .background-subnav{
-  background-color: #617E8B;
+  background-color: var(--primary-color) ;
   color:#fff;
 }
 
@@ -46,6 +46,6 @@ input.example-right-align {
 
 mat-sidenav{
   width: 250px ;
-  background: #617E8B ;
+  background: var(--primary-color)  ;
 }
 

@@ -1,4 +1,4 @@
-# iddyx
+# iddux.com / iddux.cl
 ### app for register product with security
 
 1. start project with ng serve

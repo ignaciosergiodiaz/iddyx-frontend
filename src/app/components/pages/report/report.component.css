@@ -1,6 +1,6 @@
 .title{
   font-family: 'Cinzel', serif;
   font-size:2.5em;
-  color: #294E5D;
+  color: var(--primary-color);
 }
 
