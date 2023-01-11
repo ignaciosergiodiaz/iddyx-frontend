@@ -1,31 +1,21 @@
-<div class="container">
+<div class="col-xs-12  col-pull-left-lg-12">
+  <div class="content row offset-0 mt-0" style="position: relative;left:60px;">
+    <mat-card class="example-card mt-3 m-3 " *ngFor="let product of products"
+    (click)="onSelectCard(product._id)" style="cursor:pointer; width: 18rem;" >
 
-  <div class="col-xs-12  col-pull-left-lg-12">
-
-  <br>
-
-  <h1 class="title text-center">Productos Recientes</h1>
-
-  <div class="content">
-
-    <mat-card class="example-card"
-    *ngFor="let product of products"
-    (click)="onSelectCard(product._id)"
-    style="cursor:pointer; width: 18rem; " >
-
-      <mat-card-header >
+      <mat-card-header>
         <mat-card-title>{{product.title}}</mat-card-title>
         <mat-card-subtitle> <a href="">{{product.category}}</a></mat-card-subtitle>
       </mat-card-header>
 
-      <img mat-card-image src="{{product.imageURL}}" class="p-2" >
+      <img mat-card-image src="{{product.imageURL}}" class="p-2 " >
 
       <br>
 
-      <mat-card-content>
-        <mat-card-title>
+      <mat-card-content >
+        <!-- <mat-card-title>
         {{product.price | currency}}
-        </mat-card-title>
+        </mat-card-title> -->
         <br>
         <!-- <p style="font-size:1.3rem">{{product.details_product}}</p> -->
         </mat-card-content>
@@ -35,5 +25,4 @@
 
     </mat-card>
   </div>
-</div>
 </div>

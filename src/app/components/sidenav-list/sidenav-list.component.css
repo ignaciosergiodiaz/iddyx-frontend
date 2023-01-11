@@ -3,9 +3,6 @@ a{
   color: white !important ;
 }
 
-a:hover, a:active {
-  color: lightgray
-}
 
 .nav-caption{
   display: inline-block ;
@@ -14,7 +11,7 @@ a:hover, a:active {
 }
 
 .title-app{
-  font-family: 'Cinzel', serif;
+
   font-size:1.5em;
   padding: 2rem;
   color: var(--primary-color);

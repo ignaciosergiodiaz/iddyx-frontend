@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { User } from 'src/app/interfaces/user';
 
@@ -17,22 +18,30 @@ export class SignupComponent implements OnInit {
     password: ""
   }
 
-  constructor(private us: UsersService, r: Router) { }
+  error:any;
+
+  constructor(private us: UsersService,private router: Router, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
 
-  signup() {
-    this.us.signUp(this.user)
-      .subscribe(
-        res => {
-          console.log(res)
-          localStorage.setItem("token", res.token)
+  openSnackBar() {
+    this.snackBar.open('¡Has creado un nuevo usuario éxitosamente!', 'cerrar');
+  }
 
+  signin(){
+    this.us.signIn(this.user)
+      .subscribe(
+        (res) =>{
+          console.log(res)
+          localStorage.setItem("token", res.token),
+          this.router.navigate(['/inicio'])
         },
-        err => {
-          console.log(err)
+
+        (error) => {
+          this.error = error
         }
+
       )
   }
 

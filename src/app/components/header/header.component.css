@@ -1,5 +1,21 @@
+
 :root{
   --primary-color: #1976D2;
+}
+
+li{
+  list-style: none !important;
+}
+
+a:hover{
+  border-radius: 32px !important;
+  text-decoration: none !important;
+}
+
+.active{
+  background-color: #1976D2 !important;
+  color: #fff !important;
+  border-radius: 32px;
 }
 
 .example-spacer {
@@ -47,14 +63,18 @@ input.example-right-align {
   width: 60px;
 }
 
-.title-nav{
-  font-family: 'Cinzel', serif;
+.title-nav {
   font-size:1.3em;
+  font-weight: bolder;
   text-align: center;
-  color: white !important;
+  color: #325DF4 !important;
 
 }
 
 .jumbotron{
   color: white !important;
+}
+
+.matMenu{
+  border-radius: 40px !important;
 }

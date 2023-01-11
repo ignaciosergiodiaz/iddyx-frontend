@@ -1,82 +1,72 @@
-<div class="shadow jumbotron">
-  <div class="container">
-    <h2 class="title" >Registrar Producto</h2>
-  </div>
-</div>
+<div class="row col-lg-9 mx-auto mt-3 pt-5 pb-5">
 
-<br>
+    <div class="pb-5 pt-3 mt-4">
 
-<div class="col-lg-8 mx-auto">
-  <div class="card">
+      <h1 class="text-center mt-0">Registrar el producto en iddux</h1>
+      <h2 class="text-center" style="position: relative; top:-10px;">Te ayudara a obtener más seguridad al momento de tu compra online</h2>
 
-    <div class="card-body">
+      <hr>
+      <section class="col-lg-12">
 
-          <form (submit)="uploadProduct(
-          title,
-          description,
-          details_product,
-          price,
-          category,
-          currency,
-          email,
-          code,
-          send_dates,
-          count,
-          stock,
-          imageURL)" >
-              <div class="form-group">
-                <input type="text" class="form-control"
-                placeholder="title" #title required>
+        <form class="form row" #uploadProduct="ngForm" (submit)="uploadProduct(title,description,category,code,state,imageURL)">
+
+          <div class="col-lg-6 mt-5" style="position: relative;top:40px;">
+
+              <div class="mb-3">
+                <input type="text" class="form-control" #title id="exampleFormControlInput1"
+                placeholder="Nombre del producto"  required>
+
               </div>
 
-              <div class="form-group">
-                <input type="text" class="form-control"
-                placeholder="description" #description >
+              <div class="mb-3">
+                <input type="text" class="form-control" #description id="exampleFormControlInput2"
+                placeholder="Descripción" required>
               </div>
 
-              <div class="form-group">
-                <input type="text" class="form-control"
-                placeholder="Detalles del Producto" #details_product >
+              <!-- <div class="mb-3">
+                <input type="text" #price class="form-control" id="exampleFormControlInput3"
+                placeholder="Precio">
+              </div> -->
+
+              <div class="mb-3">
+                <input type="text" #code class="form-control" required id="exampleFormControlInput4"
+                placeholder="Código del producto o una referencia para identificar que es tuyo">
               </div>
 
-              <div class="form-group">
-                <input type="number" class="form-control"
-                placeholder="Precio" #price required>
-              </div>
+              <!-- <div class="form-group">
+                <select class="form-control" #send_dates  id="exampleFormControlSelect1">
+                  <option value="">¿Cómo vas a enviar el producto?</option>
+                  <option value="Starken">Starken</option>
+                  <option value="Chile Express">Chile Express</option>
+                  <option value="Fedex">Fedex</option>
+                  <option value="Correos Chile">Correos Chile</option>
+                  <option value="Supermarket"> Blue Express</option>
+                  <option value="Junta en el metro"> Junta en el metro</option>
+                </select>
+              </div> -->
+
+              <!-- <span class="d-flex">
+                  <div class="mb-3 col-lg-6" style="position: relative; right:15px;">
+                    <input type="number"  #quantity  class="form-control" id="exampleFormControlInput6"
+                    placeholder="Cantidad">
+                  </div>
+                  <div class="mb-3 col-lg-7" style="position: relative; right:25px;">
+                    <input type="number" #stock class="form-control" id="exampleFormControlInput4"
+                    placeholder="Stock">
+                  </div>
+              </span> -->
+
+              <!-- <div class="form-group">
+                <select class="form-control" #currency  id="exampleFormControlSelect1">
+                  <option value=""> Seleccione tipo de moneda</option>
+                  <option value="Peso chileno">Peso chileno</option>
+                  <option value="Dólares">Dólares</option>
+                  <option value="Euros">Euros</option>
+                </select>
+              </div> -->
 
               <div class="form-group">
-                <input type="email" class="form-control"
-                placeholder="email" #email >
-              </div>
-
-              <div class="form-group">
-                <input type="text" class="form-control"
-                placeholder="code" #code >
-              </div>
-
-              <div class="form-group">
-                <input type="text" class="form-control"
-                placeholder="Datos de Envio" #send_dates >
-              </div>
-
-              <div class="form-group">
-                <input type="text" class="form-control"
-                placeholder="Cantidad" #count >
-              </div>
-
-              <div class="form-group">
-                <input type="number" class="form-control"
-                placeholder="Stock" #stock >
-              </div>
-
-              <div class="form-group">
-                <input type="text" class="form-control"
-                placeholder="Tipo de moneda" #currency required>
-              </div>
-
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">Categoría</label>
-                <select class="form-control" #category  id="exampleFormControlSelect1">
+                <select class="form-control" #category required  id="exampleFormControlSelect1">
                   <option value=""> Seleccione una categoría</option>
                   <option value="Muebles">Muebles</option>
                   <option value="Autos">Automóviles</option>
@@ -86,22 +76,37 @@
                 </select>
               </div>
 
-              <div class="text-center">
+              <div class="form-group">
+                <select class="form-control" #state required id="exampleFormControlSelect1">
+                  <option value="">Selecciona el estado del producto</option>
+                  <option value="Activo en Propetario">Activo en Propetario</option>
+                  <option value="Robado">Robado</option>
+                  <option value="Extraviado">Extraviado</option>
+                </select>
+              </div>
+          </div>
 
-                <input type="file" multiple class="d-none" (change)="onPhotoSelected($event)" #imageURL>
+          <div class="col-lg-6 preview image">
+            <h1 class="text-center mt-0">Subir imagen del producto</h1 >
+            <div class="col-lg-12 text-center">
+                <input type="file" draggable="true" multiple class="d-none" (change)="onPhotoSelected($event)" #imageURL>
                 <img [src]="photoSelected || './../../../assets/no-image-icon.png'" width="400"
                 height="400" class="img-fluid " alt="no-image-icon" (click)="imageURL.click()">
+            </div>
 
-                <br>
-                <br>
-
-                <button class="btn btn-success btn-block">
-                  Subir Producto
-                </button>
-
-              </div>
+            <div class="text-center mt-3">
+              <button class="btn btn-success " [disabled]="!uploadProduct.valid" (click)="openSnackBar()" style="width: 60%; ">
+                Subir Producto
+              </button>
+            </div>
+          </div>
 
         </form>
+
+      </section>
     </div>
-  </div>
+
 </div>
+
+
+

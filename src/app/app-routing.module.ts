@@ -15,40 +15,52 @@ import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
-    path: '',
-    component: HomeComponent
+    path: 'inicio',
+    component: HomeComponent,
+    pathMatch:'full'
   },
   {
     path: 'registrar_producto',
-    component: UploadproductsComponent
+    component: UploadproductsComponent,
+    pathMatch:'full',
+    canActivate: [AuthGuard]
   },
   {
-    path: 'login',
-    component: SigninComponent
+    path: 'signin',
+    component: SigninComponent,
+    pathMatch:'full'
   },
   {
     path: 'reportar_producto',
-    component: ReportComponent
+    component: ReportComponent,
+    pathMatch:'full',
+    canActivate: [AuthGuard]
   },
   {
-    path: 'registrarse',
-    component: SignupComponent
+    path: 'signup',
+    component: SignupComponent,
+    pathMatch:'full'
   },
   {
     path: 'profile',
-    component: ProfileComponent
+    component: ProfileComponent,
+    pathMatch:'full',
+    canActivate: [AuthGuard]
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
+    pathMatch:'full'
   },
   {
     path: 'mycart',
-    component: SaleComponent
+    component: SaleComponent,
+    pathMatch:'full'
   },
   {
     path: 'product/:id',
-    component: ProductComponent
+    component: ProductComponent,
+    pathMatch:'full'
   },
   {
     path: 'cart/:id',
@@ -57,13 +69,13 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'login',
+    redirectTo: 'inicio',
     pathMatch: 'full'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash:true} )],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

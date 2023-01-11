@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+.text-carousel{
+  position: relative;
+  top:-228px;
+  left:230px;
+  text-shadow: 4px 4px 4px rgb(56, 55, 55);
+  text-align: left;
+  font-size: 1.6rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bolder;
+  color:#fff !important;
+}
+
+@media (max-width:500px){
+
+  
+
+  .text-carousel{
+    position: relative;
+    left:0px;
+    text-align: center;
+    padding: 2rem;
+  }
+
+}

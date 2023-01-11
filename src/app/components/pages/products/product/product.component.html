@@ -1,20 +1,16 @@
+<div *ngIf="!showData" >
 
-  <div *ngIf="!showData" >
+  <div class="row detail-product container">
 
-    <div class="row" >
+    <div class="mt-4 pt-4 text-center" style="position: relative;left:130px;">
+      <h1 class="">Detalle del Producto Registrado</h1>
+    </div>
 
-      <br>
+    <div class="col-md-5 p-4 pt-0 mt-0 offset-2" >
 
-      <div class="col-md-7 p-4">
-          <div class="card p-5">
-            <img src="{{product.imageURL}}" class="img-fluid" alt="" >
-          </div>
-      </div>
-
-      <div class="col-md-4 p-4">
-        <div class="card">
+        <div class="card mt-4s">
           <div class="card-body">
-            <form class="card-header">
+            <form>
 
               <br>
 
@@ -25,37 +21,33 @@
 
               <h2 class="card-text">Descripción: {{product.description }}</h2>
               <h2 class="card-text">Subido el: {{product.createdAt}}</h2>
-              <h2 class="card-text">Detalle del producto: {{product.details_product}}</h2>
-
-              <h2 class="card-title">Precio: {{product.price | currency}}</h2>
-              <h2 class="card-title">Tipo de moneda: {{product.currency }}</h2>
-              <h3 class="card-text">Stock: {{product.stock }}</h3>
-              <h3 class="card-text">Cantidad: {{product.quantity }}</h3>
-
+              <h3 class="card-text">Estado del producto: {{product.state }}</h3>
               <hr>
 
               <h2 class="card-title">Código de Seguridad: {{product.code }}</h2>
-              <h2 class="card-title">Correo: {{product.email }}</h2>
 
               <br>
 
-              <button class="btn btn-primary btn-block" (click)="agregarAlCarrito()">
+              <!-- <button class="btn btn-primary btn-block" (click)="agregarAlCarrito()">
                 Agregar al carrito
-              </button>
+              </button> -->
 
             </form>
           </div>
         </div>
       </div>
 
+      <div class=" p-4 pt-0 mt-0  col-lg-5 ">
+        <img src="{{product.imageURL}}" class="mt-0" width="390"  alt="" >
+      </div>
+
     </div>
 
   </div>
 
-  <div *ngIf="showData" >
+  <div *ngIf="showData">
 
-    <div class="card row p-5" >
-
+    <div class="card row p-5">
       <div class="container col-lg-8">
 
         <h1>Comprar Producto</h1>
@@ -71,6 +63,7 @@
                 <th></th>
               </tr>
             </thead>
+
             <tbody>
               <tr>
                 <td><img src="{{product.imageURL}}" class="img-fluid" alt="" ></td>
@@ -84,7 +77,5 @@
         <button type="button" class="btn btn-success btn-block" (click)="comprarProducto()">Comprar Producto</button>
 
       </div>
-
-    </div>
-
   </div>
+</div>

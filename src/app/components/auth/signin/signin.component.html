@@ -1,42 +1,48 @@
 <div class="container" style="height: 100vh;">
 
-<div class="col-lg-4 float-left" style="margin-top:220px; ">
+  <h1 style=" font-size: 2em ; font-weight:bold; padding-top:140px; text-align:center;">¡Bienvenido a iddux! <br>  </h1>
 
-  <h1 style=" font-size: 2.4em ; font-weight:bold;"> Registra tus productos de forma segura </h1>
+  <div class="col-lg-4 float-right" style="margin-top:40px; right:90px;">
 
-</div>
+    <h2 class="text-center">Iniciar Sesión</h2>
 
-<div class="col-lg-4 float-right" style="margin-top:130px">
+    <div class="card">
 
-  <h2>Iniciar Sesión</h2>
+      <div class="card-body">
 
-  <div class="card" >
+          <span *ngIf="!username.valid && username.touched">
+            <div class="alert alert-primary" role="alert">
+             No has ingresado el nombre de usuario
+            </div>
+          </span>
 
-    <div class="card-body">
+            <form #login="ngForm" (ngSubmit)="signin()">
 
-          <form #login="ngForm" (ngSubmit)="signIn()"  novalidate>
+            <div class="form-group">
+              <input type="text" class="form-control" name="username" minlength="6" placeholder="Username: nachodíaz"  #username="ngModel" [(ngModel)]="user.username" required>
 
-          <div class="form-group">
-            <input type="text" class="form-control"
-             name="username" placeholder="Username: nachodíaz" ngModel [(ngModel)]="user.username"  required>
-          </div>
+            </div>
 
-          <div class="form-group">
-            <input type="password" class="form-control"
-             name="password" placeholder="Contraseña" ngModel [(ngModel)]="user.password" required>
-          </div>
+            <div class="form-group">
+              <input type="password" class="form-control"
+              name="password" placeholder="Contraseña" #password="ngModel" [(ngModel)]="user.password" required>
+            </div>
 
+            <button type="submit" (click)="openSnackBar()"  class="btn btn-primary btn-block" [disabled]="!login.valid">
+              Iniciar Sesión
+            </button>
+            <span></span>
+          </form>
 
-          <button type="submit" class="btn btn-success btn-block">
-            Registrar Usuario
-          </button>
-
-
-        </form>
+      </div>
 
     </div>
   </div>
-</div>
+
+  <div class="col-lg-6 offset-1 offset-lg-1 mt-4 ml-5 pl-1 float-left" >
+
+    <img src="./../../../../assets/images/undraw_game_day_ucx9.svg" class="img-fluid" width="600" alt="login-art-iddux">
+  </div>
 
 </div>
 

@@ -35,6 +35,9 @@ import { CartService } from './services/cart.service' ;
 import { ProductComponent } from './components/pages/products/product/product.component';
 import { CartComponent } from './components/pages/cart/cart.component';
 
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
+
 
 @NgModule({
   declarations: [
@@ -57,7 +60,8 @@ import { CartComponent } from './components/pages/cart/cart.component';
     ReportComponent,
     ProductComponent,
     CartComponent,
-    SaleComponent
+    SaleComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -68,7 +72,8 @@ import { CartComponent } from './components/pages/cart/cart.component';
     NgbModule,
     FlexLayoutModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
 
   providers: [
@@ -78,6 +83,7 @@ import { CartComponent } from './components/pages/cart/cart.component';
       useClass:TokenInterceptorService,
       multi: true
     }
+
   ],
   bootstrap: [AppComponent]
 })

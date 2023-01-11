@@ -9,7 +9,9 @@ import { Router } from '@angular/router';
 
 export class UsersService {
 
-  URL = 'https://api.iddux.com/api' ;
+  // URL = 'https://api.iddux.com/api' ;
+
+  URL = 'http://localhost:3000/api' ;
 
   constructor(private http: HttpClient, private router: Router ) { }
 
@@ -32,7 +34,9 @@ export class UsersService {
 
   logout(){
     localStorage.removeItem("token")
-    this.router.navigate(["/signin"])
+    localStorage.removeItem("id_user")
+    localStorage.removeItem("username")
+    localStorage.removeItem("email")
   }
 
 }

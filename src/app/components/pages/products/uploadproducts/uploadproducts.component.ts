@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
-
+import {MatSnackBar} from '@angular/material/snack-bar';
 import { ProductsService } from '../../../../services/products.service';
 
 interface HtmlInputEvent extends Event {
@@ -18,11 +18,28 @@ export class UploadproductsComponent implements OnInit {
   public file: File;
   photoSelected: string | ArrayBuffer;
 
+  product = {
+    title: "",
+    description: "",
+    code: "",
+    category: "",
+    state:"",
+    imageURL: ""
+  }
+
+
   products: Array<any> ;
 
-  constructor(public ps: ProductsService, private router: Router) { }
+  constructor(public ps: ProductsService, private router: Router, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
+
+  }
+
+
+
+  openSnackBar() {
+    this.snackBar.open('Producto subido', 'cerrar');
   }
 
   onPhotoSelected(event: HtmlInputEvent): void {
@@ -37,25 +54,21 @@ export class UploadproductsComponent implements OnInit {
 
   uploadProduct(
 
-    title: HTMLInputElement, description: HTMLInputElement, details_product: HTMLInputElement,
-    price:HTMLInputElement, category: HTMLSelectElement, currency: HTMLInputElement,
-    email: HTMLInputElement, code: HTMLInputElement, send_dates: HTMLInputElement,
-    quantity: HTMLInputElement, stock: HTMLInputElement, imageURL: File): Boolean{
+    title: HTMLInputElement, description: HTMLInputElement, category: HTMLSelectElement,
+    code: HTMLInputElement,  state: HTMLInputElement, imageURL: File): Boolean{
 
-      this.ps.saveProduct(title.value, description.value, details_product.value, price.value,category.value,
-      currency.value, email.value, code.value, send_dates.value, quantity.value, stock.value,
-      this.file )
+      this.ps.saveProduct(title.value, description.value, category.value, code.value,  state.value, this.file )
 
       .subscribe(
 
           res =>
           {
             console.log(res)
-            this.router.navigate(['/products'])
+            this.router.navigate(['inicio'])
           },
           err => console.log(err))
 
-        return false ;
+          return true ;
 
       }
   }

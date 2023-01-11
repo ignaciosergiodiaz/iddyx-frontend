@@ -1,33 +1,63 @@
 <div class="container" style="height: 100vh;">
-<div class="col-lg-4 mx-auto" style="margin-top:140px">
-  <div class="card">
 
-    <div class="card-body">
+  <h1 style=" font-size: 2em ; font-weight:bold; padding-top:140px; text-align:center;"> Registra tus productos <br>  de forma segura </h1>
 
-          <form #formulario="ngForm" (ngSubmit)="signup()" >
-
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Nombre de Usuario"
-            name="username" [(ngModel)]="user.username" required>
-          </div>
-
-          <div class="form-group">
-            <input type="email" class="form-control" placeholder="Correo"
-            name="email"  [(ngModel)]="user.email"  required>
-          </div>
-
-          <div class="form-group">
-            <input type="password" class="form-control" placeholder="Contraseña"
-             name="password" [(ngModel)]="user.password" required>
-          </div>
-
-          <button type="submit" class="btn btn-success btn-block">
-            Registrar Usuario
-          </button>
-
-        </form>
-
-    </div>
+  <div class="col-lg-6 offset-1 offset-lg-1 float-right" style="margin-top:20px; ">
+    <img src="./../../../../assets/images/undraw_explore_re_8l4v.svg" class="img-fluid" width="600" alt="login-art-iddux">
   </div>
+
+  <div class="col-lg-4 float-right" style="margin-top:40px">
+
+    <h2 class="text-center">Registrar Usuario</h2>
+
+        <div class="mx-auto">
+
+          <span *ngIf="!username.valid && username.touched">
+            <div class="alert alert-primary" role="alert">
+            No has ingresado el nombre de usuario
+            </div>
+          </span>
+
+          <span *ngIf="!email.valid && email.touched">
+            <div class="alert alert-warning" role="alert">
+            No has ingresado el correo
+            </div>
+          </span>
+
+          <div class="card">
+
+            <div class="card-body">
+
+                  <form #formulario="ngForm" (ngSubmit)="signin()" >
+
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Nombre de Usuario"
+                    name="username" #username="ngModel" [(ngModel)]="user.username" required validate>
+                  </div>
+
+                  <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Correo"
+                    name="email" #email="ngModel"  [(ngModel)]="user.email"  required validate>
+                  </div>
+
+                  <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Contraseña"
+                     name="password"  [(ngModel)]="user.password" required>
+                  </div>
+
+                  <button type="submit" (click)="openSnackBar()" [disabled]="!formulario.valid" class="btn btn-success btn-block">
+                    Registrar Usuario
+                  </button>
+
+                </form>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
 </div>
-</div>
+
+
+
+

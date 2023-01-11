@@ -1,5 +1,4 @@
 .title{
-  font-family: 'Cinzel', serif;
   font-size:2.5em;
   color: var(--primary-color);
 }
@@ -27,11 +26,39 @@
 }
 
 mat-card{
-  display: inline-block;
-  margin:3% 3% 3%;
+  border-radius:40px !important;
+}
+
+mart-card, img{
+ object-fit:contain;
+ width: 300px;
+ height: 300px;
 }
 
 .example-card:hover{
   shadow: 2px 2px ;
+}
+
+
+@media (max-width:500px) {
+  .mat-card{
+    position: relative;
+    left:15px;
+  }
+
+}
+
+
+@media (max-width:390px) {
+  .buscador{
+    width: 90%;
+    position: relative;
+    right:20px;
+  }
+  .mat-card{
+    position: relative;
+    left:-30px;
+  }
+
 }
 

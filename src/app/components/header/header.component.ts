@@ -13,12 +13,16 @@ export class HeaderComponent implements OnInit {
 
   constructor(public us: UsersService, private router: Router) { }
 
-  ngOnInit(): void {
+  user: any ;
+
+  ngOnInit() {
+    this.user =  localStorage.getItem("username")
   }
 
   public onToggleSideNav = () => {
     this.sidenavTogggle.emit()
   }
+
 
   public loggedIn(){
     return !!localStorage.getItem("token")

@@ -1,18 +1,11 @@
-<mat-toolbar color="primary" class="mat-elevation-z10 background-nav" >
 
-  <div style="text-align:right;">
-    <a mat-button [routerLink]="['']" class="title-nav right" >
-     IDDUX.COM
-    </a>
+<mat-toolbar class="mat-elevation-z10 fixed-top" >
+
+  <div>
+    <button mat-button [routerLink]="['/inicio']" class="title-nav" >
+      iddux
+    </button>
   </div>
-
-  <div class="container">
-
-  </div>
-
-</mat-toolbar>
-
-<mat-toolbar color="primary" class="mat-elevation-z10 background-nav" >
 
   <div class="container">
 
@@ -30,29 +23,30 @@
 
       <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
 
-        <a mat-button [routerLink]="['']">
+        <button mat-button [routerLink]="['inicio']">
           Inicio
-        </a>
+        </button>
 
         <button mat-button [routerLink]="['registrar_producto']">
           Registrar Producto
         </button>
 
+        <!--
         <button mat-button [routerLink]="['reportar_producto']">
           Reportar Producto
-        </button>
+        </button> -->
 
-        <button mat-button [routerLink]="['reportar_producto']">
+        <!-- <button mat-button [routerLink]="['reportar_producto']">
          Soporte
-        </button>
+        </button> -->
 
         <span class="example-spacer"></span>
 
-        <button mat-raised-button [routerLink]="['login']" color="primary" style="margin-right:1%;">
+        <button mat-button [routerLink]="['/signin']" color="primary" class="p2">
           Iniciar Sessión
         </button>
 
-        <button mat-raised-button [routerLink]="['registrarse']" color="accent">
+        <button mat-button [routerLink]="['/signup']" color="success">
           Registrate
         </button>
 
@@ -66,27 +60,39 @@
 
     <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
 
-      <a mat-button [routerLink]="['']">
-        Inicio
-      </a>
+      <li >
+        <a mat-button routerLinkActive="active" class="mt-1"  routerLink="inicio">
+          Inicio
+        </a>
+      </li>
+      <li  >
+        <a mat-button routerLinkActive="active" class="mt-1 ml-2" routerLink="registrar_producto">
+          Registrar Producto
+        </a>
+      </li>
 
-      <button mat-button [routerLink]="['registrar_producto']">
-        Registrar Producto
-      </button>
 
-      <button mat-button [routerLink]="['reportar_producto']">
+      <!-- <button mat-button [routerLink]="['reportar_producto']">
         Reportar Producto
-      </button>
+      </button> -->
 
       <span class="example-spacer"></span>
 
+      <button mat-button [matMenuTriggerFor]="menu" >Hola {{user}} ¿Cómo te va?</button>
+      <mat-menu #menu="matMenu" class="matMenu">
+        <button mat-menu-item routerLink="profile">Configurar cuenta</button>
+        <button mat-menu-item  (click)="us.logout()">Salir de la app</button>
+      </mat-menu>
+
+
+      <!--
       <button mat-button [routerLink]="['profile']" style="margin-right:1%;">
           Profile
-      </button>
+      </button> -->
 
-      <button mat-raised-button (click)="us.logout()" color="warn">
+      <!-- <button mat-raised-button (click)="us.logout()" color="warn">
           Cerrar Sesión
-      </button>
+      </button> -->
 
     </div>
 
