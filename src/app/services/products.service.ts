@@ -14,7 +14,7 @@ export class ProductsService {
 
   // URI = 'https://api.iddux.com/api' ;
 
-  URI = 'http://iddux.cl:3000/api/products' ;
+  URI = 'http://iddux.cl:3000/api' ;
 
   constructor(private http: HttpClient) { }
 

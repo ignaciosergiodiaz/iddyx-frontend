@@ -12,7 +12,7 @@ export class CartService {
   product: Product ;
 
 
-  URI = 'http://iddux.cl:3000/api/products' ;
+  URI = 'http://iddux.cl:3000/api' ;
 
   constructor(private http: HttpClient) { }
 
