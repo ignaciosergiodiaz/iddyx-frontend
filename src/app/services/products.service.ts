@@ -12,9 +12,7 @@ export class ProductsService {
   Product = {}
   product: Product;
 
-  // URI = 'https://api.iddux.com/api' ;
-
-  URI = 'http://iddux.cl:3000/api' ;
+  URI = 'http://localhost:3000/api' ;
 
   constructor(private http: HttpClient) { }
 
@@ -51,7 +49,8 @@ export class ProductsService {
     return this.http.post<any[]>(`${this.URI}/product/${_id}`, HttpOptions)
   }
 
-  saveProduct( title: string, desctiption: string, category: string, code: string, state:string, imageURL: File){
+  saveProduct( title: string, desctiption: string, details_product: string, price: any, category: string, currency:string, email: string, code: string,
+    send_dates: string, quantity:string, stock: string, imageURL: File){
 
   const HttpOptions = {
     headers: new HttpHeaders(
@@ -65,9 +64,15 @@ export class ProductsService {
 
     fd.append('title', title);
     fd.append('description', desctiption);
+    fd.append('details_product', details_product);
+    fd.append('price', price);
     fd.append('category', category);
+    fd.append('currency', currency);
+    fd.append('email', email);
     fd.append('code', code);
-    fd.append('state', state);
+    fd.append('send_dataes', send_dates);
+    fd.append('quantity', quantity);
+    fd.append('stock', stock);
     fd.append('imageURL', imageURL);
 
     return this.http.post(`${this.URI}/products/upload/`, fd, HttpOptions);

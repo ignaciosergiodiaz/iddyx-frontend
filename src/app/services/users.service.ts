@@ -11,7 +11,8 @@ export class UsersService {
 
   // URL = 'https://api.iddux.com/api' ;
 
-  URL = 'http://iddux.cl:3000/api' ;
+  URL = 'http://localhost:3000/api' ;
+
 
   constructor(private http: HttpClient, private router: Router ) { }
 
