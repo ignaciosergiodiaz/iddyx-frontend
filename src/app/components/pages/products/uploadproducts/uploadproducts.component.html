@@ -11,7 +11,7 @@
 
     <div class="card-body">
 
-          <form (submit)="uploadProduct(title,description,details_product,price,category,currency,email,
+          <form (submit)="uploadProduct(title,description,price,category,currency,email,
           code, send_dates,count,stock,imageURL)" >
               <div class="form-group">
                 <input type="text" class="form-control"
@@ -21,11 +21,6 @@
               <div class="form-group">
                 <input type="text" class="form-control"
                 placeholder="description" #description >
-              </div>
-
-              <div class="form-group">
-                <input type="text" class="form-control"
-                placeholder="Detalles del Producto" #details_product >
               </div>
 
               <div class="form-group">

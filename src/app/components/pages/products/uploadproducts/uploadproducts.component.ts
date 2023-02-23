@@ -37,12 +37,12 @@ export class UploadproductsComponent implements OnInit {
 
   uploadProduct(
 
-    title: HTMLInputElement, description: HTMLInputElement, details_product: HTMLInputElement,
+    title: HTMLInputElement, description: HTMLInputElement,
     price:HTMLInputElement, category: HTMLSelectElement, currency: HTMLInputElement,
     email: HTMLInputElement, code: HTMLInputElement, send_dates: HTMLInputElement,
     quantity: HTMLInputElement, stock: HTMLInputElement, imageURL: File): Boolean{
 
-      this.ps.saveProduct(title.value, description.value, details_product.value, price.value,category.value,
+      this.ps.saveProduct(title.value, description.value, price.value,category.value,
       currency.value, email.value, code.value, send_dates.value, quantity.value, stock.value,
       this.file )
 

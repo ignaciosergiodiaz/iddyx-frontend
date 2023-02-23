@@ -17,28 +17,20 @@ interface HtmlInputEvent extends Event {
 
 export class ProductComponent implements OnInit {
 
-  product : any ;
+  product : Product[] ;
 
   showData: Boolean;
   id: string;
 
-
-  registerForm = this.fb.group({
-    title: [''],
-    price: ['']
-  })
-
   constructor(
-
     private ps: ProductsService,
-    private fb : FormBuilder,
     private router: Router,
     public cs: CartService,
     private activateRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
 
-    this.product = {} ;
+    this.product = [] ;
 
     this.activateRoute.params.subscribe(params => {
       this.id = params['id'];
@@ -55,24 +47,7 @@ export class ProductComponent implements OnInit {
     })
   }
 
-  activarEdicion(title: String, quantity: Number) : void{
-    this.showData = true ;
-    this.product.title = title ;
-    this.product.quantity = quantity ;
-  }
 
-  agregarAlCarrito(){
-    let _id =  this.id
 
-    this.router.navigate(['/cart/' + _id])
-  }
-
-  comprarProducto(){
-
-    this.ps.addToCart(this.product)
-        .subscribe(res => {
-          console.log(res)
-        })
-  }
 
 }

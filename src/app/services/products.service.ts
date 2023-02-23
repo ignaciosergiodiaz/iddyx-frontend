@@ -49,7 +49,7 @@ export class ProductsService {
     return this.http.post<any[]>(`${this.URI}/product/${_id}`, HttpOptions)
   }
 
-  saveProduct( title: string, desctiption: string, details_product: string, price: any, category: string, currency:string, email: string, code: string,
+  saveProduct( title: string, desctiption: string, price: any, category: string, currency:string, email: string, code: string,
     send_dates: string, quantity:string, stock: string, imageURL: File){
 
   const HttpOptions = {
@@ -64,7 +64,6 @@ export class ProductsService {
 
     fd.append('title', title);
     fd.append('description', desctiption);
-    fd.append('details_product', details_product);
     fd.append('price', price);
     fd.append('category', category);
     fd.append('currency', currency);

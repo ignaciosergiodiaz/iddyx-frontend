@@ -1,81 +1,88 @@
 <div *ngIf="!showData" >
 
-  <div class="row detail-product container">
+  <div class="row" >
 
-    <div class="mt-4 pt-4 text-center" style="position: relative;left:130px;">
-      <h1 class="">Detalle del Producto Registrado</h1>
+    <br>
+
+    <div class="col-md-7 p-4">
+        <div class="card p-5">
+          <img src="{{product.imageURL}}" class="img-fluid" alt="" >
+        </div>
     </div>
 
-    <div class="col-md-5 p-4 pt-0 mt-0 offset-2" >
+    <div class="col-md-4 p-4 mt-5 pt-5">
+      <div class="card">
+        <div class="card-body">
+          <form class="card-header">
 
-        <div class="card mt-4s">
-          <div class="card-body">
-            <form>
+            <br>
 
-              <br>
+            <h1 class="card-title">Titulo: {{product.title}}</h1>
+            <h2 class="card-title">Propietario: {{product.owner }}</h2>
 
-              <h1 class="card-title">{{product.title}}</h1>
-              <h2 class="card-title">Propietario: {{product.owner }}</h2>
+            <hr>
 
-              <hr>
+            <h2 class="card-text">Descripción: {{product.description }}</h2>
+            <h2 class="card-text">Subido el: {{product.createdAt}}</h2>
 
-              <h2 class="card-text">Descripción: {{product.description }}</h2>
-              <h2 class="card-text">Subido el: {{product.createdAt}}</h2>
-              <h3 class="card-text">Estado del producto: {{product.state }}</h3>
-              <hr>
+            <h2 class="card-title">Precio: {{product.price | currency }}</h2>
+            <h2 class="card-title">Tipo de moneda: {{product.currency }}</h2>
+            <h3 class="card-text">Stock: {{product.stock }}</h3>
+            <h3 class="card-text">Cantidad: {{product.quantity }}</h3>
 
-              <h2 class="card-title">Código de Seguridad: {{product.code }}</h2>
+            <hr>
 
-              <br>
+            <h2 class="card-title">Código de Seguridad: {{product.code }}</h2>
+            <h2 class="card-title">Correo: {{product.email }}</h2>
 
-              <!-- <button class="btn btn-primary btn-block" (click)="agregarAlCarrito()">
-                Agregar al carrito
-              </button> -->
+            <br>
 
-            </form>
-          </div>
+            <button class="btn btn-primary btn-block" (click)="agregarAlCarrito()">
+              Agregar al carrito
+            </button>
+
+          </form>
         </div>
       </div>
+    </div>
 
-      <div class=" p-4 pt-0 mt-0  col-lg-5 ">
-        <img src="{{product.imageURL}}" class="mt-0" width="390"  alt="" >
-      </div>
+  </div>
+
+</div>
+
+<div *ngIf="showData" >
+
+  <div class="card row p-5" >
+
+    <div class="container col-lg-8">
+
+      <h1>Comprar Producto</h1>
+
+      <form #form="ngForm">
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Imgen</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Precio</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="{{product.imageURL}}" class="img-fluid" alt="" ></td>
+              <td><input type="text" #title name="title" class="form-control" [(ngModel)]="product.title"></td>
+              <td><input type="number" #price name="price"  class="form-control"  [(ngModel)]="product.price"></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+
+      <button type="button" class="btn btn-success btn-block" (click)="comprarProducto()">Comprar Producto</button>
 
     </div>
 
   </div>
 
-  <div *ngIf="showData">
-
-    <div class="card row p-5">
-      <div class="container col-lg-8">
-
-        <h1>Comprar Producto</h1>
-
-        <form #form="ngForm">
-
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Imgen</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Precio</th>
-                <th></th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td><img src="{{product.imageURL}}" class="img-fluid" alt="" ></td>
-                <td><input type="text" #title name="title" class="form-control" [(ngModel)]="product.title"></td>
-                <td><input type="number" #price name="price"  class="form-control"  [(ngModel)]="product.price"></td>
-              </tr>
-            </tbody>
-          </table>
-        </form>
-
-        <button type="button" class="btn btn-success btn-block" (click)="comprarProducto()">Comprar Producto</button>
-
-      </div>
-  </div>
 </div>
