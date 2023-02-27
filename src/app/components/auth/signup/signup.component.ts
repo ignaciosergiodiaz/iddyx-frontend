@@ -29,19 +29,17 @@ export class SignupComponent implements OnInit {
     this.snackBar.open('¡Has creado un nuevo usuario éxitosamente!', 'cerrar');
   }
 
-  signin(){
-    this.us.signIn(this.user)
+  signup(){
+    this.us.signUp(this.user)
       .subscribe(
         (res) =>{
           console.log(res)
           localStorage.setItem("token", res.token),
-          this.router.navigate(['/inicio'])
+          this.router.navigate(['/signin'])
         },
-
         (error) => {
           this.error = error
         }
-
       )
   }
 

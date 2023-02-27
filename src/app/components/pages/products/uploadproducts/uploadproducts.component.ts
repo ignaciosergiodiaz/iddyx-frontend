@@ -36,19 +36,14 @@ export class UploadproductsComponent implements OnInit {
   }
 
   uploadProduct(title: HTMLInputElement, description: HTMLInputElement, code:HTMLInputElement, category: HTMLSelectElement,  state:HTMLSelectElement, imageURL: File): Boolean{
-
-      this.ps.saveProduct(title.value, description.value,  code.value,  category.value, state.value,  this.file )
-
+      this.ps.saveProduct(title.value, description.value, code.value, category.value,state.value, this.file )
       .subscribe(
-
           res =>
           {
             console.log(res)
             this.router.navigate(['/'])
           },
           err => console.log(err))
-
         return false ;
-
       }
   }

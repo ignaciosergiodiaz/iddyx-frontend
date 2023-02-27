@@ -10,7 +10,7 @@
 
     <h2 class="text-center">Registrar Usuario</h2>
 
-        <div class="mx-auto">
+      <div class="mx-auto">
 
           <span *ngIf="!username.valid && username.touched">
             <div class="alert alert-primary" role="alert">
@@ -28,33 +28,35 @@
 
             <div class="card-body">
 
-                  <form #formulario="ngForm" (ngSubmit)="signin()" >
+                  <form #formulario="ngForm" (ngSubmit)="signup()">
 
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Nombre de Usuario"
-                    name="username" #username="ngModel" [(ngModel)]="user.username" required validate>
+                    <input type="text" class="form-control" placeholder="Nombre de Usuario" name="username"
+                    #username="ngModel" [(ngModel)]="user.username" required validate>
                   </div>
 
                   <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Correo"
-                    name="email" #email="ngModel"  [(ngModel)]="user.email"  required validate>
+                    <input type="email" class="form-control" placeholder="Correo" name="email"
+                     #email="ngModel"  [(ngModel)]="user.email" required validate>
                   </div>
 
                   <div class="form-group">
                     <input type="password" class="form-control" placeholder="Contraseña"
-                     name="password"  [(ngModel)]="user.password" required>
+                    name="password"  [(ngModel)]="user.password" required>
                   </div>
 
-                  <button type="submit" (click)="openSnackBar()" [disabled]="!formulario.valid" class="btn btn-success btn-block">
+                  <button type="submit" (click)="openSnackBar()" [disabled]="!formulario.valid"
+                   class="btn btn-success btn-block">
                     Registrar Usuario
                   </button>
 
                 </form>
 
             </div>
-          </div>
-        </div>
 
+          </div>
+
+        </div>
       </div>
 </div>
 
