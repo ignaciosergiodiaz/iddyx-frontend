@@ -1,25 +1,38 @@
-<!-- <ngb-carousel *ngIf="images">
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img src="./../../../assets/images/woman-shopping.png" alt="Random first slide">
-    </div>
-    <div class="carousel-caption">
-      <h1 class="text-carousel">
-        Registra tus productos en iddux.com <br>
-        La forma más segura de registrar tus compras
-      </h1>
-    </div>
-  </ng-template>
-</ngb-carousel> -->
-
-<div class="header">
-
-
-  <div class="picsum-img-wrapper">
-    <img src="./../../../assets/images/woman-shopping.png" alt="Random first slide">
-  </div>
-  <h1 class="text-carousel">
-    Registra tus productos en iddux.com <br>
-    la mejor opción online para almecanar tus productos
-  </h1>
-</div>
+<ngb-carousel *ngIf="images">
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img src="./../../../assets/images/guitarra.png" alt="Random first slide" />
+		</div>
+		<div class="carousel-caption">
+			<h3>10 seconds between slides...</h3>
+			<p>This carousel uses customized default values.</p>
+		</div>
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img src="./../../../assets/images/auto.png" alt="Random second slide" />
+		</div>
+		<div class="carousel-caption">
+			<h3>No mouse events...</h3>
+			<p>This carousel doesn't pause or resume on mouse events</p>
+		</div>
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img src="./../../../assets/images/register.png" alt="Random third slide" />
+		</div>
+		<div class="carousel-caption">
+			<h3>No keyboard...</h3>
+			<p>This carousel uses customized default values.</p>
+		</div>
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img src="./../../../assets/images/guitarra.png" alt="Random fourth slide" />
+		</div>
+		<div class="carousel-caption">
+			<h3>And no wrap after last slide.</h3>
+			<p>This carousel uses customized default values.</p>
+		</div>
+	</ng-template>
+</ngb-carousel>

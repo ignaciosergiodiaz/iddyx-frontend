@@ -5,42 +5,26 @@
     <br>
 
     <div class="col-md-7 p-4">
-        <div class="card p-5">
+        <div class="card p-5 pt-5 mt-5">
           <img src="{{product.imageURL}}" class="img-fluid" alt="" >
         </div>
     </div>
 
     <div class="col-md-4 p-4 mt-5 pt-5">
-      <div class="card">
+      <div class="card mt-5 pt-5">
         <div class="card-body">
           <form class="card-header">
-
             <br>
-
             <h1 class="card-title">Titulo: {{product.title}}</h1>
             <h2 class="card-title">Propietario: {{product.owner }}</h2>
-
             <hr>
-
             <h2 class="card-text">Descripción: {{product.description }}</h2>
+            <h2 class="card-text">Categoría: {{product.category }}</h2>
             <h2 class="card-text">Subido el: {{product.createdAt}}</h2>
-
-            <h2 class="card-title">Precio: {{product.price | currency }}</h2>
-            <h2 class="card-title">Tipo de moneda: {{product.currency }}</h2>
-            <h3 class="card-text">Stock: {{product.stock }}</h3>
-            <h3 class="card-text">Cantidad: {{product.quantity }}</h3>
-
             <hr>
-
             <h2 class="card-title">Código de Seguridad: {{product.code }}</h2>
-            <h2 class="card-title">Correo: {{product.email }}</h2>
-
+            <h2 class="card-title">Estado del producto: {{product.state }}</h2>
             <br>
-
-            <button class="btn btn-primary btn-block" (click)="agregarAlCarrito()">
-              Agregar al carrito
-            </button>
-
           </form>
         </div>
       </div>

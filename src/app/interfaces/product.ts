@@ -2,12 +2,9 @@ export interface Product {
   _id: string,
   title: string,
   description:string,
-  price: number,
+  code:string,
   category: string,
-  currency: string,
-  email:string,
+  state:string,
   imageURL: string,
-  stock:number,
-  quantity:number,
   owner: string
 }

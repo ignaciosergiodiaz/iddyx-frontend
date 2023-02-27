@@ -49,8 +49,7 @@ export class ProductsService {
     return this.http.post<any[]>(`${this.URI}/product/${_id}`, HttpOptions)
   }
 
-  saveProduct( title: string, desctiption: string, price: any, category: string, currency:string, email: string, code: string,
-    send_dates: string, quantity:string, stock: string, imageURL: File){
+  saveProduct(title: string, desctiption: string, code: string, category: string, state:string,imageURL: File){
 
   const HttpOptions = {
     headers: new HttpHeaders(
@@ -64,14 +63,9 @@ export class ProductsService {
 
     fd.append('title', title);
     fd.append('description', desctiption);
-    fd.append('price', price);
-    fd.append('category', category);
-    fd.append('currency', currency);
-    fd.append('email', email);
     fd.append('code', code);
-    fd.append('send_dataes', send_dates);
-    fd.append('quantity', quantity);
-    fd.append('stock', stock);
+    fd.append('category', category);
+    fd.append('state', state);
     fd.append('imageURL', imageURL);
 
     return this.http.post(`${this.URI}/products/upload/`, fd, HttpOptions);

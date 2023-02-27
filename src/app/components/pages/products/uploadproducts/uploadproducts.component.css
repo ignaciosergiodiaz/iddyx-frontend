@@ -28,3 +28,8 @@
 .register-product{
   padding: 4.5rem !important;
 }
+
+.title-register-product{
+  font-size: 2rem;
+  padding:1rem;
+}
