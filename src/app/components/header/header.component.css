@@ -1,6 +1,10 @@
-
 :root{
   --primary-color: #1976D2;
+}
+
+.nav{
+  background-color: #1571e8;
+  color:#fff !important;
 }
 
 li{
@@ -13,9 +17,9 @@ a:hover{
 }
 
 .active{
-  background-color: #1976D2 !important;
+  background-color: #1e0541 !important;
   color: #fff !important;
-  border-radius: 32px;
+  border-radius: 15px;
 }
 
 .example-spacer {
@@ -77,4 +81,16 @@ input.example-right-align {
 
 .matMenu{
   border-radius: 40px !important;
+}
+
+.title-nav{
+  color: #fff !important;
+}
+
+a{
+  color: #fff !important;
+}
+
+.mat-button-wrapper{
+  color: #fff !important;
 }
