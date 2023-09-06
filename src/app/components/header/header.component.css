@@ -13,9 +13,9 @@ a:hover{
 }
 
 .active{
-  background-color: #1976D2 !important;
+  background-color: #1e0541 !important;
   color: #fff !important;
-  border-radius: 32px;
+  border-radius: 15px;
 }
 
 .example-spacer {
@@ -78,3 +78,12 @@ input.example-right-align {
 .matMenu{
   border-radius: 40px !important;
 }
+
+.title-nav{
+  color: #fff !important;
+}
+
+a{
+  color: #fff !important;
+}
+

@@ -1,5 +1,6 @@
 .example-spacer {
   flex: 1 1 auto;
+  background-color: #eb6d6d;
 }
 
 .example-container .mat-form-field + .mat-form-field {
@@ -26,7 +27,7 @@ input.example-right-align {
 }
 
 .background-nav{
-  background: var(--primary-color) ;
+  background: #eb6d6d ;
   color: #fff !important ;
 }
 
@@ -46,6 +47,7 @@ input.example-right-align {
 
 mat-sidenav{
   width: 250px ;
-  background: var(--primary-color)  ;
+  background: #dcdcdc !important ;
 }
+
 

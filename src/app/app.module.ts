@@ -36,6 +36,7 @@ import { ProductComponent } from './components/pages/products/product/product.co
 import { CartComponent } from './components/pages/cart/cart.component';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { SearchComponent } from './components/search/search.component';
 
 
 
@@ -61,6 +62,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     ProductComponent,
     CartComponent,
     SaleComponent,
+    SearchComponent,
 
   ],
   imports: [
