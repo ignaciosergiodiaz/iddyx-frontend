@@ -6,12 +6,9 @@
   --primary-color: #1976D2;
 }
 
-*{
-  overflow-x: hidden !important;
-}
 
 html, body { height: 100%; }
-body { margin: 0;  font-family: 'Open Sans', sans-serif;  overflow-x: hidden !important;}
+body { margin: 0;  font-family: 'Open Sans', sans-serif;  }
 
 .mat-drawer-container{background-color: rgb(231, 231, 231) !important;}
 
@@ -62,6 +59,7 @@ textarea:focus{
 }
 
 
+<<<<<<< HEAD
 .mat-toolbar-row, .mat-toolbar-single-row {
   display: flex;
   box-sizing: border-box;
@@ -81,4 +79,9 @@ textarea:focus{
   font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
   letter-spacing: normal;
   background: rgb(231, 231, 231);
+=======
+
+footer{
+   
+>>>>>>> 7d0413ecd5f143b9cda5615c8b979dfb87afc89d
 }

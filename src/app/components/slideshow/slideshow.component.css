@@ -1,32 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 
-.text-carousel{
-  position: relative;
-  top:-228px;
-  left:230px;
-  text-shadow: 4px 4px 4px rgb(56, 55, 55);
-  text-align: left;
-  font-size: 1.6rem;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bolder;
-  color:#fff !important;
-}
+
 
 .picsum-img-wrapper img{
   height: 480px;
-  width: 2080px;
+  width: 100%;
   object-fit: cover !important;
 }
 
-h3{
-  font-size: 2rem;
-  font-weight: bolder;
-}
 
-p{
-  font-size: 1.4rem;
-  font-weight: bolder;
-}
 
 @media (max-width:500px){
 
