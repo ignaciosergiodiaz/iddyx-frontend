@@ -13,7 +13,7 @@ body { margin: 0;  font-family: 'Open Sans', sans-serif;  }
 .mat-drawer-container{background-color: rgb(231, 231, 231) !important;}
 
 input{
-  border-radius:40px !important;
+  border-radius:8px !important;
 
   padding:1.5rem 2rem !important;
   color:#1f5891 !important;
@@ -33,7 +33,7 @@ select:focus{
 
 
 select{
-  border-radius:40px !important;
+  border-radius:8px !important;
   height: 3rem !important;
   padding: 1px 30px !important;
   color:#1f5891 !important;
@@ -41,16 +41,16 @@ select{
 }
 
 button{
-  border-radius:40px !important;
+  border-radius:8px !important;
 }
 
 .card{
   border: none !important;
-  border-radius:60px !important;
+  border-radius:12px !important;
 }
 
 textarea{
-  border-radius:32px !important;
+  border-radius:8px !important;
   padding:1.5rem !important;
 }
 
@@ -59,7 +59,6 @@ textarea:focus{
 }
 
 
-<<<<<<< HEAD
 .mat-toolbar-row, .mat-toolbar-single-row {
   display: flex;
   box-sizing: border-box;
@@ -71,17 +70,9 @@ textarea:focus{
   background-color: #501e9a !important;
 }
 
-.mat-button-wrapper{
-  color: #fff !important;
-}
 
 .mat-body, .mat-body-1, .mat-typography {
   font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
   letter-spacing: normal;
   background: rgb(231, 231, 231);
-=======
-
-footer{
-   
->>>>>>> 7d0413ecd5f143b9cda5615c8b979dfb87afc89d
 }

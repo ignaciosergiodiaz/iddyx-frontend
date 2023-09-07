@@ -8,9 +8,9 @@
 
   <div class="col-lg-4 float-right" style="margin-top:40px">
 
-    <h2 class="text-center">Registrar Usuario</h2>
-
       <div class="mx-auto">
+
+
 
           <span *ngIf="!username.valid && username.touched">
             <div class="alert alert-primary" role="alert">
@@ -26,7 +26,10 @@
 
           <div class="card">
 
-            <div class="card-body">
+            <div class="card-body pb-5 pt-5 mb-5">
+
+              <h2 class="text-center">Registrar Usuario</h2>
+
 
                   <form #formulario="ngForm" (ngSubmit)="signup()">
 

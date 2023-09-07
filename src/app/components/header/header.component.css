@@ -12,14 +12,14 @@ li{
 }
 
 a:hover{
-  border-radius: 32px !important;
+  border-radius: 8px !important;
   text-decoration: none !important;
 }
 
 .active{
   background-color: #1e0541 !important;
-  color: #fff !important;
-  border-radius: 15px;
+
+  border-radius: 8px;
 }
 
 .example-spacer {
@@ -62,7 +62,7 @@ input.example-right-align {
 .profile-image{
   background: url('https://material.angular.io/assets/img/examples/shiba1.jpg') ;
   background-size: cover;
-  border-radius: 50px;
+  border-radius: 16px;
   height:60px;
   width: 60px;
 }
@@ -80,20 +80,7 @@ input.example-right-align {
 }
 
 .matMenu{
-  border-radius: 40px !important;
+  border-radius: 8px !important;
 }
 
-.title-nav{
-  color: #fff !important;
-}
 
-a{
-  color: #fff !important;
-}
-
-<<<<<<< HEAD
-=======
-.mat-button-wrapper{
-  color: #fff !important;
-}
->>>>>>> 7d0413ecd5f143b9cda5615c8b979dfb87afc89d
