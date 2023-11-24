@@ -1,67 +1,65 @@
 <div class="col-lg-8 mx-auto pt-5 mt-5">
-  <div class="card mb-5 mt-5 pt-5 pb-5">
+  <div class="card">
 
     <h1 class="text-center title-register-product">Registrar Producto</h1>
 
     <div class="card-body">
 
-      <form class="row" (submit)="uploadProduct(title,description,code,category,state,imageURL)" >
+          <form class="row" (submit)="uploadProduct(title,description,code,category,state,imageURL)" >
 
-        <div class="form col-lg-6 mt-5">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="title" #title >
-          </div>
+            <div class="form col-lg-6 mt-5">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="title" #title >
+              </div>
 
-          <div class="form-group">
-            <input type="text" class="form-control"  placeholder="description" #description >
-          </div>
+              <div class="form-group">
+                <input type="text" class="form-control"  placeholder="description" #description >
+              </div>
 
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="code" #code >
-          </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="code" #code >
+              </div>
 
-          <div class="form-group">
-            <label for="exampleFormControlSelect1">Categoría</label>
-            <select class="form-control" #category  id="exampleFormControlSelect1">
-              <option value=""> Seleccione una categoría</option>
-              <option value="Muebles">Muebles</option>
-              <option value="Autos">Automóviles</option>
-              <option value="Tecnologia">Tecnología</option>
-              <option value="Ropa">Ropa</option>
-              <option value="supermarket"> supermercado</option>
-              <option value="instrumento-musical">instrumentos musicales</option>
-            </select>
-          </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Categoría</label>
+                <select class="form-control" #category  id="exampleFormControlSelect1">
+                  <option value=""> Seleccione una categoría</option>
+                  <option value="Muebles">Muebles</option>
+                  <option value="Autos">Automóviles</option>
+                  <option value="Tecnologia">Tecnología</option>
+                  <option value="Ropa">Ropa</option>
+                  <option value="supermarket"> supermercado</option>
+                  <option value="instrumento-musical">instrumentos musicales</option>
+                </select>
+              </div>
 
-          <div class="form-group">
-            <label for="exampleFormControlSelect2">¿Cuál es el estado actual del producto?</label>
-            <select class="form-control" #state  id="exampleFormControlSelect2">
-              <option value=""> Seleccione un estado</option>
-              <option value="activo">Producto activo en propietario</option>
-              <option value="extraviado">Producto Extraviado</option>
-              <option value="robado">Producto Robado</option>
-            </select>
-          </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect2">¿Cuál es el estado actual del producto?</label>
+                <select class="form-control" #state  id="exampleFormControlSelect2">
+                  <option value=""> Seleccione un estado</option>
+                  <option value="activo">Producto activo en propietario</option>
+                  <option value="extraviado">Producto Extraviado</option>
+                  <option value="robado">Producto Robado</option>
+                </select>
+              </div>
+            </div>
 
-          <br />
-          <br />
+            <div class="col-lg-6">
+              <div class="text-center">
 
-          <button class="btn btn-success col-lg-5 float-right">
-            Subir Producto
-          </button>
-        </div>
+                <input type="file" multiple class="d-none" (change)="onPhotoSelected($event)" #imageURL>
+                <img [src]="photoSelected || './../../../assets/no-image-icon.png'" width="400"
+                height="400" class="img-fluid " alt="no-image-icon" (click)="imageURL.click()">
 
-        <div class="col-lg-6">
-          <div class="text-center">
+                <br>
+                <br>
 
-            <input type="file" multiple class="d-none" (change)="onPhotoSelected($event)" #imageURL>
-            <img [src]="photoSelected || './../../../assets/no-image-icon.png'" width="400"
-            height="400" class="img-fluid " alt="no-image-icon" (click)="imageURL.click()">
+                <button class="btn btn-success btn-block">
+                  Subir Producto
+                </button>
 
-          
-
-        </div>
-    </div>
+            </div>
+            </div>
 
 
         </form>

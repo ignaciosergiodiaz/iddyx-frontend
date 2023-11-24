@@ -20,6 +20,9 @@ a{
 
 
 
+mat-icon{
+  color: #fff !important;
+}
 
 mat-list-item{
   color: #ffffff !important ;

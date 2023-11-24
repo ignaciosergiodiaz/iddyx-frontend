@@ -6,14 +6,17 @@
   --primary-color: #1976D2;
 }
 
+*{
+  overflow-x: hidden !important;
+}
 
 html, body { height: 100%; }
-body { margin: 0;  font-family: 'Open Sans', sans-serif;  }
+body { margin: 0;  font-family: 'Open Sans', sans-serif;  overflow-x: hidden !important;}
 
-.mat-drawer-container{background-color: rgb(231, 231, 231) !important;}
+.mat-drawer-container{background-color: white !important;}
 
 input{
-  border-radius:8px !important;
+  border-radius:40px !important;
 
   padding:1.5rem 2rem !important;
   color:#1f5891 !important;
@@ -33,7 +36,7 @@ select:focus{
 
 
 select{
-  border-radius:8px !important;
+  border-radius:40px !important;
   height: 3rem !important;
   padding: 1px 30px !important;
   color:#1f5891 !important;
@@ -41,16 +44,16 @@ select{
 }
 
 button{
-  border-radius:8px !important;
+  border-radius:40px !important;
 }
 
 .card{
   border: none !important;
-  border-radius:12px !important;
+  border-radius:60px !important;
 }
 
 textarea{
-  border-radius:8px !important;
+  border-radius:32px !important;
   padding:1.5rem !important;
 }
 
@@ -58,21 +61,3 @@ textarea:focus{
   box-shadow: none !important;
 }
 
-
-.mat-toolbar-row, .mat-toolbar-single-row {
-  display: flex;
-  box-sizing: border-box;
-  padding: 0 16px;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-  white-space: nowrap;
-  background-color: #501e9a !important;
-}
-
-
-.mat-body, .mat-body-1, .mat-typography {
-  font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
-  letter-spacing: normal;
-  background: rgb(231, 231, 231);
-}

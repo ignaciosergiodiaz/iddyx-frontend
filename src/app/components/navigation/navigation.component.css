@@ -1,6 +1,5 @@
 .example-spacer {
   flex: 1 1 auto;
-  background-color: #eb6d6d;
 }
 
 .example-container .mat-form-field + .mat-form-field {
@@ -27,7 +26,7 @@ input.example-right-align {
 }
 
 .background-nav{
-  background: #eb6d6d ;
+  background: var(--primary-color) ;
   color: #fff !important ;
 }
 
@@ -39,7 +38,7 @@ input.example-right-align {
 .profile-image{
   background: url('https://material.angular.io/assets/img/examples/shiba1.jpg') ;
   background-size: cover;
-  border-radius: 8px;
+  border-radius: 50px;
   height:60px;
   width: 60px;
 }
@@ -47,7 +46,6 @@ input.example-right-align {
 
 mat-sidenav{
   width: 250px ;
-  background: #dcdcdc !important ;
+  background: var(--primary-color)  ;
 }
-
 
