@@ -1,63 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-
-:root{
-  --primary-color: #1976D2;
-}
-
-*{
-  overflow-x: hidden !important;
-}
-
-html, body { height: 100%; }
-body { margin: 0;  font-family: 'Open Sans', sans-serif;  overflow-x: hidden !important;}
-
-.mat-drawer-container{background-color: white !important;}
-
-input{
-  border-radius:40px !important;
-
-  padding:1.5rem 2rem !important;
-  color:#1f5891 !important;
-}
-
-input:focus{
-  box-shadow: none !important;
-}
-
-button:focus{
-  box-shadow: none !important;
-}
-
-select:focus{
-  box-shadow: none !important;
-}
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 
-select{
-  border-radius:40px !important;
-  height: 3rem !important;
-  padding: 1px 30px !important;
-  color:#1f5891 !important;
-  font-weight: bolder !important;
-}
 
-button{
-  border-radius:40px !important;
-}
 
-.card{
-  border: none !important;
-  border-radius:60px !important;
-}
-
-textarea{
-  border-radius:32px !important;
-  padding:1.5rem !important;
-}
-
-textarea:focus{
-  box-shadow: none !important;
-}
 

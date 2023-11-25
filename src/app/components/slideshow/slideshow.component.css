@@ -14,7 +14,7 @@
 
 .picsum-img-wrapper img{
   height: 480px;
-  width: 2080px;
+  width: 100%;
   object-fit: cover !important;
 }
 
