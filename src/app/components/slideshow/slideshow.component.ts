@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlideshowComponent implements OnInit {
 
-  images = [180, 1070, 1082].map((n) => `https://picsum.photos/id/${n}`);
-
   constructor() { }
 
   ngOnInit(): void {

@@ -1,38 +1,38 @@
-<ngb-carousel *ngIf="images">
-	<ng-template ngbSlide>
-		<div class="picsum-img-wrapper">
-			<img src="./../../../assets/images/guitarra.png" alt="Random first slide" />
-		</div>
-		<div class="carousel-caption">
-			<h3>10 seconds between slides...</h3>
-			<p>This carousel uses customized default values.</p>
-		</div>
-	</ng-template>
-	<ng-template ngbSlide>
-		<div class="picsum-img-wrapper">
-			<img src="./../../../assets/images/auto.png" alt="Random second slide" />
-		</div>
-		<div class="carousel-caption">
-			<h3>No mouse events...</h3>
-			<p class="text-carousel">This carousel doesn't pause or resume on mouse events</p>
-		</div>
-	</ng-template>
-	<ng-template ngbSlide>
-		<div class="picsum-img-wrapper">
-			<img src="./../../../assets/images/register.png" alt="Random third slide" />
-		</div>
-		<div class="carousel-caption">
-			<h3>No keyboard...</h3>
-			<p>This carousel uses customized default values.</p>
-		</div>
-	</ng-template>
-	<ng-template ngbSlide>
-		<div class="picsum-img-wrapper">
-			<img src="./../../../assets/images/woman-shopping.png" alt="Random fourth slide" />
-		</div>
-		<div class="carousel-caption">
-			<h3>And no wrap after last slide.</h3>
-			<p>This carousel uses customized default values.</p>
-		</div>
-	</ng-template>
+<ngb-carousel>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="./../../../assets/images/guitarra.png" alt="Imagen de un producto" />
+    </div>
+    <div class="carousel-caption">
+      <h3 class="title-carousel">Protege tus productos</h3>
+      <p class="text-carousel">Registra tus objetos valiosos para prevenir robos y extravíos.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="./../../../assets/images/auto.png" alt="Imagen de un vehículo" />
+    </div>
+    <div class="carousel-caption">
+      <h3 class="title-carousel">Registro sin eventos del mouse</h3>
+      <p class="text-carousel">Tu registro no se ve afectado por eventos del mouse.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="./../../../assets/images/register.png" alt="Imagen de un documento" />
+    </div>
+    <div class="carousel-caption">
+      <h3 class="title-carousel">Registro sin teclado</h3>
+      <p  class="text-carousel">Simplifica el proceso con nuestro registro sin necesidad de teclado.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="./../../../assets/images/woman-shopping.png" alt="Imagen de una persona comprando" />
+    </div>
+    <div class="carousel-caption">
+      <h3 class="title-carousel" >Sin envoltura después de la última diapositiva</h3>
+      <p class="text-carousel">Garantizamos una experiencia fluida de registro sin interrupciones.</p>
+    </div>
+  </ng-template>
 </ngb-carousel>

@@ -8,10 +8,10 @@
         "statusBarItem.remoteBackground": "#dd0536",
         "titleBar.activeBackground": "#dd0536",
         "titleBar.inactiveBackground": "#dd053699",
-        "editorError.foreground": "#000000ff",
+        "editorError.foreground": "#ff5c5c",
         "editorGroup.border": "#fa1b4e",
-        "editorInfo.foreground": "#000000ff",
-        "editorWarning.foreground": "#000000ff",
+        "editorInfo.foreground": "#4646ff",
+        "editorWarning.foreground": "#e9b008",
         "panel.border": "#fa1b4e",
         "sideBar.border": "#fa1b4e",
         "statusBar.border": "#dd0536",
@@ -21,5 +21,6 @@
         "titleBar.border": "#dd0536"
     },
     "peacock.color": "#dd0536",
-    "jira-plugin.workingProject": ""
+    "jira-plugin.workingProject": "",
+    "editor.indentSize": "tabSize"
 }
