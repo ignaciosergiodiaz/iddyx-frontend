@@ -1,7 +1,16 @@
+<!-- products.component.html -->
 <div class="container">
   <h1 class="title text-center pt-5 mb-5">Productos Recientes</h1>
+
+  <div class="mb-3">
+    <mat-form-field appearance="fill" class="search-input">
+      <mat-icon matPrefix class="search-icon">search</mat-icon>
+      <input matInput [formControl]="queryControl" placeholder="Buscar Productos">
+    </mat-form-field>
+  </div>
+
   <div class="row">
-    <div class="col-md-3 mb-4" *ngFor="let product of products">
+    <div class="col-md-3 mb-4" *ngFor="let product of products | filter: queryControl.value">
       <app-product-card [product]="product" (selectCard)="onSelectCard($event)"></app-product-card>
     </div>
     <div *ngIf="products.length === 0" class="col-md-12 text-center">

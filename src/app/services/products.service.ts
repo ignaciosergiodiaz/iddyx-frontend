@@ -38,6 +38,28 @@ export class ProductsService {
 
   }
 
+  filterProducts(products: Product[], query: string): Product[] {
+    // Lógica de filtrado aquí
+    // Puedes utilizar el mismo código del Pipe de Filtro si lo deseas
+
+    if (!products || !query) {
+      return products;
+    }
+
+    const lowerQuery = query.toLowerCase();
+
+    return products.filter(
+      (product) =>
+        product.title.toLowerCase().includes(lowerQuery) ||
+        product.description.toLowerCase().includes(lowerQuery)
+      // Puedes agregar más campos según tus necesidades
+    );
+  }
+
+  getOriginalProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.URI}/products`);
+  }
+
   buyProduct(_id:string):Observable<any> {
     const HttpOptions = {
       headers: new HttpHeaders(
@@ -58,6 +80,8 @@ export class ProductsService {
           'Accept': 'multipart/form-data'
       })
   }
+
+  
 
   const fd = new FormData();
 

@@ -44,6 +44,7 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
 import { CartService } from './services/cart.service' ;
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     ProductComponent,
     CartComponent,
     SaleComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
