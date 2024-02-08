@@ -27,20 +27,18 @@ export class ProductsComponent implements OnInit {
   constructor(private ps: ProductsService, private cs: CartService, private router: Router) { }
 
   ngOnInit(): void {
+    this.subscription = this.ps.getOriginalProducts().subscribe(
+      res => {
+        this.products = res;
+        this.originalProducts = res;
+        console.log(this.originalProducts);
+      }
+    );
 
-    this.ps.getOriginalProducts()
-      .subscribe(
-        res => {
-         this.products = res;
-         this.originalProducts = res;
-         console.log(this.originalProducts)
-      })
-
-      // Escucha los cambios en el formulario reactivo y realiza la búsqueda en tiempo real
-      this.queryControl.valueChanges.subscribe(() => {
-        this.searchProducts();
-      });
-
+    // Escucha los cambios en el formulario reactivo y realiza la búsqueda en tiempo real
+    this.queryControl.valueChanges.subscribe(() => {
+      this.searchProducts();
+    });
   }
 
   ngOnDestroy(): void {
