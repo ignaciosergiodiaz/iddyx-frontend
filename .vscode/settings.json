@@ -22,5 +22,6 @@
     },
     "peacock.color": "#dd0536",
     "jira-plugin.workingProject": "",
-    "editor.indentSize": "tabSize"
+    "editor.indentSize": "tabSize",
+    "DockerRun.DisableDockerrc": true
 }
