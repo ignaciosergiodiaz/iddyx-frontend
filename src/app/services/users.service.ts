@@ -9,10 +9,7 @@ import { Router } from '@angular/router';
 
 export class UsersService {
 
-  // URL = 'https://api.iddux.com/api' ;
-
-  URL = 'http://localhost:3945/api' ;
-
+  URL = 'http://143.198.40.116:3945/api' ;
 
   constructor(private http: HttpClient, private router: Router ) { }
 
