@@ -11,7 +11,7 @@ export class CartService {
 
   product: Product ;
 
-  URI = 'http://localhost:3945/api' ;
+  URI = 'http://143.198.40.116:3945/api' ;
 
   constructor(private http: HttpClient) { }
 
