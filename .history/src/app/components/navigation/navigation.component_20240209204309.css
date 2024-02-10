@@ -1,0 +1,67 @@
+// Estilos generales
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+
+.center-search {
+  margin-left: 20%;
+  margin-top: 1%;
+  width: 45%;
+}
+
+.background-nav {
+  background: var(--primary-color);
+  color: #fff !important;
+}
+
+.background-subnav {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.profile-image {
+  background: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+  border-radius: 50px;
+  height: 60px;
+  width: 60px;
+}
+
+// Estilos específicos para el sidenav
+
+mat-sidenav {
+  width: 250px;
+  background: var(--primary-color);
+}
+
+// Estilos específicos para la versión móvil
+
+@media (max-width: 600px) {
+  // Alineación del icono del menú en versión móvil
+  .example-right-align-mobile {
+    text-align: right;
+  }
+
+  // Fondo sólido y opaco para el sidenav en dispositivos móviles
+  mat-sidenav {
+    background-color: rgba(0, 0, 0, 0.9); /* Cambia el valor alpha según lo necesites */
+  }
+}

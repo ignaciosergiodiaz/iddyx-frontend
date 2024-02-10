@@ -1,0 +1,101 @@
+
+<mat-toolbar class="mat-elevation-z10 fixed-top" >
+
+  <div>
+    <button mat-button [routerLink]="['/inicio']" class="title-nav" >
+      iddux
+    </button>
+  </div>
+
+  <div class="container">
+
+    <div fxHide.gt-xs>
+      <button mat-icon-button (click)="onToggleSideNav()">
+          <mat-icon style="float:right;     float: right;
+          font-size: 3.0em;
+          position: relative;
+          left: -14px;">menu</mat-icon>
+      </button>
+
+    </div>
+
+    <ng-container *ngIf="!us.loggedIn() ; else loggedIn">
+
+      <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+
+        <button mat-button [routerLink]="['inicio']">
+          Inicio
+        </button>
+
+        <button mat-button [routerLink]="['registrar_producto']">
+          Registrar Producto
+        </button>
+
+        <!--
+        <button mat-button [routerLink]="['reportar_producto']">
+          Reportar Producto
+        </button> -->
+
+        <!-- <button mat-button [routerLink]="['reportar_producto']">
+         Soporte
+        </button> -->
+
+        <span class="example-spacer"></span>
+
+        <button mat-button [routerLink]="['/signin']" color="primary" class="p2">
+          Iniciar Sessión
+        </button>
+
+        <button mat-button [routerLink]="['/signup']" color="success">
+          Registrate
+        </button>
+
+      </div>
+
+    </ng-container>
+
+  </div>
+
+  <ng-template #loggedIn>
+
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+
+      <li >
+        <a mat-button routerLinkActive="active" class="mt-1"  routerLink="inicio">
+          Inicio
+        </a>
+      </li>
+      <li  >
+        <a mat-button routerLinkActive="active" class="mt-1 ml-2" routerLink="registrar_producto">
+          Registrar Producto
+        </a>
+      </li>
+
+
+      <!-- <button mat-button [routerLink]="['reportar_producto']">
+        Reportar Producto
+      </button> -->
+
+      <span class="example-spacer"></span>
+
+      <button mat-button [matMenuTriggerFor]="menu" >Hola {{user}} ¿Cómo te va?</button>
+      <mat-menu #menu="matMenu" class="matMenu">
+        <button mat-menu-item routerLink="profile">Configurar cuenta</button>
+        <button mat-menu-item  (click)="us.logout()">Salir de la app</button>
+      </mat-menu>
+
+
+      <!--
+      <button mat-button [routerLink]="['profile']" style="margin-right:1%;">
+          Profile
+      </button> -->
+
+      <!-- <button mat-raised-button (click)="us.logout()" color="warn">
+          Cerrar Sesión
+      </button> -->
+
+    </div>
+
+  </ng-template>
+
+</mat-toolbar>

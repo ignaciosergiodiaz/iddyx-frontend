@@ -1,0 +1,29 @@
+a{
+  text-decoration: none;
+  color: white !important ;
+}
+
+
+.nav-caption{
+  display: inline-block ;
+  padding-left: 6px;
+  color: #ffffff !important;
+}
+
+.title-app{
+
+  font-size:1.5em;
+  padding: 2rem;
+  color: var(--primary-color);
+
+}
+
+
+
+mat-icon{
+  color: #fff !important;
+}
+
+mat-list-item{
+  color: #ffffff !important ;
+}

@@ -1,0 +1,18 @@
+<mat-toolbar>
+  <mat-toolbar-row  class="container">
+    <span>iddux.com</span>
+
+    <div class="ml-4">    
+      <button mat-button [routerLink]="['inicio']">
+        Inicio
+      </button>
+
+      <button mat-button [routerLink]="['registrar_producto']">
+        Registrar Producto
+      </button>
+      
+    </div>    
+    <span class="example-spacer"></span>
+    <mat-icon class="example-icon" aria-hidden="false" (click)="onToggleSideNav()" aria-label="Example delete icon">menu</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>

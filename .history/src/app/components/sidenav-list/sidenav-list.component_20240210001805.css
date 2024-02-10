@@ -1,0 +1,32 @@
+$primary-color: #180053 ;
+
+a{
+  text-decoration: none;
+  color: $prim  !important ;
+}
+
+.nav-caption{
+  display: inline-block ;
+  padding-left: 6px;
+  color: #180053 !important;
+}
+
+.title-app{
+
+  font-size:1.5em;
+  padding: 2rem;
+  color: var(--primary-color);
+
+}
+
+mat-icon{
+  color: #180053  !important;
+}
+
+mat-list-item{
+  color: #180053  !important ;
+}
+
+mat-drawer {
+  width: 360px !important; /* Ajusta el valor según sea necesario */
+}

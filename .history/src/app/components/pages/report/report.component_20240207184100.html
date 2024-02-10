@@ -1,0 +1,53 @@
+<div class="jumbotron">
+  <div class="container">
+    <h2 class="title text-center mt-5 pt-4">Reportar robo o perdida de Producto</h2>
+  </div>
+</div>
+
+<br>
+
+<div class="col-lg-8 mx-auto">
+  <div class="card">
+
+    <div class="card-body">
+
+          <form #formReport="ngForm" (submit)="reportProduct()" >
+
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Seleccione su problema</label>
+                <select class="form-control" #category  id="exampleFormControlSelect1">
+                  <option value="">Seleccione un problema</option>
+                  <option value="perdida">Peridida de Producto</option>
+                  <option value="robot">Robo</option>
+                  <option value="suplatancion">Suplantación</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <input type="asunto" class="form-control"
+                placeholder="Asunto " #title required>
+              </div>
+
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Example textarea</label>
+                <textarea class="form-control" placeholder="Describa su problema" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+
+              <div class="text-center">
+
+                <input type="file" multiple class="d-none" (change)="onPhotoSelected($event)" #imageURL>
+                <img [src]="photoSelected || './../../../assets/no-image-icon.png'" width="400"
+                height="400" class="img-fluid " alt="no-image-icon" (click)="imageURL.click()">
+
+                <br>
+
+                <button type="submit" class="btn btn-block btn-danger" >
+                  Reportar problema
+                </button>
+
+              </div>
+
+        </form>
+    </div>
+  </div>
+</div>

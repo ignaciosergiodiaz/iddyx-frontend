@@ -1,0 +1,33 @@
+:root {
+  --primary-color: #1976D2;
+  --text-color: #FFFFFF;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color) !important;
+}
+
+.nav-caption {
+  display: inline-block;
+  padding-left: 6px;
+  color: var(--text-color) !important;
+}
+
+.title-app {
+  font-size: 1.5em;
+  padding: 2rem;
+  color: var(--primary-color);
+}
+
+mat-icon {
+  color: var(--text-color) !important;
+}
+
+mat-list-item {
+  color: var(--text-color) !important;
+}
+
+.mat-drawer {
+  width: 450px; /* Define el ancho deseado para el sidenav */
+}

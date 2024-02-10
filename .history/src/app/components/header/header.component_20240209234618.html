@@ -1,0 +1,37 @@
+<mat-toolbar class="mat-elevation-z10 fixed-top">
+  <div>
+    <button mat-button [routerLink]="['/inicio']">
+      iddux
+    </button>
+  </div>
+
+  <div class="container">
+    <ng-container *ngIf="!us.loggedIn(); else loggedIn">
+      <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+        <button mat-button [routerLink]="['inicio']">
+          Inicio
+        </button>
+        <button mat-button [routerLink]="['registrar_producto']">
+          Registrar Producto
+        </button>
+        <span class="example-spacer"></span>
+        <button mat-button [routerLink]="['/signin']" color="primary" class="p2">
+          Iniciar Sesión
+        </button>
+        <button mat-button [routerLink]="['/signup']" color="success">
+          Registrarse
+        </button>
+      </div>
+    </ng-container>
+
+    <div class="mobile-menu">
+      <button mat-icon-button (click)="onToggleSideNav()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <ng-template #loggedIn>
+    <!-- Código para el usuario loggeado -->
+  </ng-template>
+</mat-toolbar>
